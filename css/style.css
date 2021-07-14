@@ -43,8 +43,7 @@ html {
   --line-hight-large-: 6rem;
   --line-hight-medium: 4rem;
   --line-hight-small: 2.6rem;
-  --line-hight-button: 52.4rem
-  --box-shadow: 0 0 rgba(0, 0, 0, 0.15);
+  --line-hight-button: 2.4rem
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -60,6 +59,13 @@ body {
   padding: 1rem 2.4rem;
   outline: none;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #FBC638;
 }
 
 /* -----------------
@@ -98,6 +104,12 @@ body {
     text-decoration: none;
     color: var(--white-color);
   }
+  .navbar__menu{
+    display: none;
+    font-size: 2.4rem;
+    color: var(--white-color);
+
+  }
   .navbar__btn{
 
   }
@@ -114,7 +126,6 @@ body {
   }
   .topBanner{
     display: flex;
-    flex-wrap: wrap;
     gap: 4rem;
     justify-content: space-between;
     align-items: center;
@@ -148,15 +159,15 @@ body {
     padding: 8rem var(--body-side-padding);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
     gap: 2.7rem 3rem;
     
   }
   .player{
-    max-width: 33rem;
+    max-width: 32rem;
     max-height: 47.4rem;
     padding: 1.5rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    box-shadow:0 0 15px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     text-overflow: clip;
     margin: 0 auto;
@@ -301,14 +312,149 @@ body {
     }
   }
 
+ /* ---------------------
+    Sponsors section style
+  ------------------------*/
+  .sponsors{
+    max-width: calc(var(--max-width) - 3rem)  ;
+    padding: 8rem calc(var(--body-side-padding) + 5rem);
+    margin: 4rem auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  }
+  .sponsors__main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+  .sponsors__main>img{
+    flex-basis: 33%;
+    max-width: 23rem;
 
+  }
+  .sponsors__secondary{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sponsors__secondary>img{
+    flex-basis: 10%;
+    max-width: 12.8em;
+  }
 
+  /* --------------------
+  footer section style
+  -------------------- */
+  .footer{
+    margin: 0 auto;
+    max-width: 48.3rem;
+    max-height: 21.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
 
-  @media screen and (max-width:600px) {
-    html{
-      font-size: 50%;
+  }
+  .footer__logo{
+    max-height: 11rem;
+    max-width: 70%;
+    margin-bottom: 1.5em;
+  }
+  .footer__socialMedia{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer__socialMedia>i{
+    font-size: var(--font-size-small);
+    background-color: lightgray;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer.footer>p{
+    font-size: var(--font-size-small);
+    font-weight: var(--font-width-small-bold);
+    line-height: var(--line-hight-medium);
+  }
+
+  /*---------------------
+   media query for mobile 
+   ---------------------*/
+  @media screen and (max-width:688px) {
+    :root {
+      /* font sizes */
+      --font-size-extra-large: 3.6rem;
+      --font-size-large: 3rem;
+        /* font width */
+      --font-width-extra-large: 700;
+        /* line hight */
+      --line-hight-extra-large: 5rem;
+      --line-hight-large-: 4rem;
     }
-    .navbar__link{
+    .navbar{
+      margin: 2em 0;
+    }
+    .navbar__links{
       display: none;
+    }
+    .navbar__menu{
+      display: block;
+    }
+    .navbar__btn{
+      height: 3.2rem;
+      width: 9rem;
+      font-size: 14px;
+    }
+    .topBanner{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .players{
+      grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+    }
+    .sponsors{
+      padding: 4rem var(--body-side-padding);
+    }
+  }
+  /*---------------------
+   media query for tablet 
+   ---------------------*/
+  @media screen and (min-width:689px) and (max-width:929px) {
+    :root {
+      /* font sizes */
+      --font-size-extra-large: 4.6rem;
+      --font-size-large: 3.2rem;
+        /* font width */
+      --font-width-extra-large: 700;
+        /* line hight */
+      --line-hight-extra-large: 5rem;
+      --line-hight-large-: 5rem;
+    }
+    .navbar{
+      margin: 2.2em 0;
+    }
+    .navbar__links{
+      display: none;
+    }
+    .navbar__menu{
+      display: block;
+    }
+    .topBanner{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .topBanner__info{
+      max-width: 32.5rem;
+    }
+    .topBanner__img {
+      max-height: 30em;
+      max-width: 30em;
+    }
+    .sponsors{
+      padding: 4rem var(--body-side-padding);
     }
   }
