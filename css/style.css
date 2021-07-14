@@ -15,24 +15,35 @@ html {
    common style 
  --------------*/
 :root {
+  /* height width */
   --max-width: 1160px;
-  --body-side-padding: 1rem;
+  /* padding margin */
+  --body-side-padding: 2rem;
+  /* colors */
   --main-color: #2D25A0;
   --button-color:  #E02C6D;
   --gray-color: #6C6C6C;
   --white-color: #fff;
   --black-color: #000;
-  --font-size-extra-large-: 6.4rem;
+  /* font sizes */
+  --font-size-extra-large: 6.4rem;
   --font-size-large-: 4.8rem;
   --font-size-medium: 2.8rem;
   --font-size-small: 1.6rem;
-  --font-size-button:1.6rem
-  --font-width-extra-large-: 800;
+  --font-size-button:1.6rem;
+    /* font width */
+  --font-width-extra-large: 800;
   --font-width-large-: 700rem;
   --font-width-medium: 700;
   --font-width-small-normal: 400;
   --font-width-small-bold: 500;
   --font-width-button:500
+    /* line hight */
+    --line-hight-extra-large: 8.8rem;
+  --line-hight-large-: 6rem;
+  --line-hight-medium: 4rem;
+  --line-hight-small: 2.6rem;
+  --line-hight-button:52.4rem
   --box-shadow:0px, 0px rgba(0, 0, 0, 0.15);
 }
 body {
@@ -40,6 +51,99 @@ body {
   overflow-x: hidden;
 }
 
+.btn{
+  font-size: var(--font-size-button);
+  font-weight: var(--font-width-button);
+  line-height: var(--line-hight-button);
+  color: var(--white-color);
+  background-color: var(--button-color);
+  padding: 1rem 2.4rem;
+  outline: none;
+  border: none;
+}
+
 /* -----------------
   header section style 
   ---------------------*/
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  100vw;
+    background-color: var(--main-color);
+  }
+  .navbar{
+    flex-grow: 2;
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--body-side-padding);
+    /* height: 4.4em; */
+    margin: 4.2em 0;
+  }
+  .navbar__links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 50%;
+  }
+  .navbar__link{
+    font-size: var(--font-size-small);
+    line-height: var(--line-hight-button);
+    font-weight: var(--font-width-small-bold);
+    padding-right: 1em;
+    list-style: none;
+  }
+  .navbar__link>a{
+    text-decoration: none;
+    color: var(--white-color);
+  }
+  .navbar__btn{
+
+  }
+  .navbar__btn>i{
+    padding-right: .5em;
+  }
+
+  /* ---------------------
+  Top banner section style 
+  ------------------------*/
+  .banner{
+    min-height: 45.6rem;
+    background-color: var(--main-color);
+  }
+  .topBanner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    max-width: calc(var(--max-width) - 1.8rem) ;
+    padding: var(--body-side-padding);
+    margin: 0 auto;
+  }
+  .topBanner__info{
+    max-width: 48.5rem;
+  }
+  .topBanner__info>h1{
+    color: var(--white-color);
+    font-size: var(--font-size-extra-large);
+    font-weight: var(--font-width-extra-large);
+    line-height: var(--line-hight-extra-large);
+    margin-bottom: 2.7rem;
+  }
+  .topBanner__info>button>i{
+    padding-left: .5em;
+  }
+  
+  .topBanner__img{
+    max-height: 44rem;
+    max-width: 100%;
+  }
+
+
+  @media screen and (max-width:600px) {
+    html{
+      font-size: 50%;
+    }
+  }
