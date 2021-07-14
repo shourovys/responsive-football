@@ -181,8 +181,134 @@ body {
     line-height: var(--line-hight-small);
     padding: 1rem 0 3.3rem 0;
   }
+
+  /* ---------------------
+    matches section style
+  ------------------------*/
+  .matches{
+    max-width: calc(var(--max-width) - 1.8rem) ;
+    padding: var(--body-side-padding);
+    border: 1.5rem solid var(--main-color);
+    margin: 0 auto;
+    position: relative;
+  }
+  .matches__heading{
+    font-size: var(--font-size-large);
+    font-weight: var(--font-width-extra-large);
+    line-height: var(--line-hight-large);
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: -4.5rem;
+    background: white;
+    background-size: 4rem;
+    padding: 0 2rem;
+  }
+  .matches__time{
+    font-size: calc(var(--font-size-medium) - .8rem);
+    font-weight: var(--font-width-small-normal);
+    line-height: var(--line-hight-small);
+    text-align: center;
+    padding: 1rem 0;
+    word-spacing: .3em;
+  }
+  .matches__time>span{
+    font-size: var(--font-size-small);
+    background-color: red;
+    color: white;
+    padding: 0 .6em;
+  }
+  .matches__details{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .matches__last,
+  .matches__next,
+  .matches__table{
+    padding: 2em;
+    margin: 1em 0;
+  }
+  
+  .matches__last{
+    flex: 34rem 1 2;
+    border-right: 2px solid lightgray;
+  }
+  .matches__next{
+    flex: 34rem 1 2;
+
+  }
+  .matches__table{
+    flex: 34rem 2 1;
+    border-left: 2px solid lightgray;
+  }
+   
+  /* common style in matches */
+  .matches__info{
+    display: flex;
+    justify-content: space-between;
+  }
+  .matches__name{
+    
+  }
+  .matches__name>p:first-child{
+    font-size: calc(var(--font-size-small) - .2rem);
+  }
+  .matches__name>p:last-child{
+    font-size: calc(var(--font-size-small) - .4rem);
+  }
+  .matches__btn{
+    min-width: 80px;
+    max-height: 2rem;
+    font-size: calc(var(--font-size-small) - .6rem);
+    font-weight: 500;
+    color: var(--white-color);
+    background-color: var(--button-color);
+    padding: 0.2rem .6rem;
+    outline: none;
+    border: none;
+    /* letter-spacing: .1em; */
+  }
+  .matches__scores{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+  .matches__scores h3{
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-width-small-normal);
+    line-height: var(--line-hight-medium);
+  }
+  .matches__team{
+    display: flex;
+    align-items: center;
+    gap: .8em;
+  }
+  @media screen and (max-width:1089px) {
+    .matches__table{
+      border-left: 0px ;
+    border-top: 2px solid lightgray;
+    }
+  }
+  
+  @media screen and (max-width:750px) {
+    .matches__last{
+      border-right: 0;
+    }
+    .matches__next{
+      border-top: 2px solid lightgray;
+    }
+  }
+
+
+
+
   @media screen and (max-width:600px) {
     html{
       font-size: 50%;
+    }
+    .navbar__link{
+      display: none;
     }
   }
