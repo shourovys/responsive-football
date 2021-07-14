@@ -27,24 +27,24 @@ html {
   --black-color: #000;
   /* font sizes */
   --font-size-extra-large: 6.4rem;
-  --font-size-large-: 4.8rem;
+  --font-size-large: 4.8rem;
   --font-size-medium: 2.8rem;
   --font-size-small: 1.6rem;
   --font-size-button:1.6rem;
     /* font width */
   --font-width-extra-large: 800;
-  --font-width-large-: 700rem;
+  --font-width-large-: 700;
   --font-width-medium: 700;
   --font-width-small-normal: 400;
   --font-width-small-bold: 500;
   --font-width-button:500
     /* line hight */
-    --line-hight-extra-large: 8.8rem;
+  --line-hight-extra-large: 8.8rem;
   --line-hight-large-: 6rem;
   --line-hight-medium: 4rem;
   --line-hight-small: 2.6rem;
-  --line-hight-button:52.4rem
-  --box-shadow:0px, 0px rgba(0, 0, 0, 0.15);
+  --line-hight-button: 52.4rem
+  --box-shadow: 0 0 rgba(0, 0, 0, 0.15);
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -140,8 +140,47 @@ body {
     max-height: 44rem;
     max-width: 100%;
   }
-
-
+  /* ---------------------
+  players section style 
+  ------------------------*/
+  .players{
+    max-width: calc(var(--max-width) - 7rem) ;
+    padding: 8rem var(--body-side-padding);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
+    gap: 2.7rem 3rem;
+    
+  }
+  .player{
+    max-width: 33rem;
+    max-height: 47.4rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-overflow: clip;
+    margin: 0 auto;
+  }
+  .player__img{
+    max-width: 100%;
+    max-height: 25.6rem;
+  }
+  .player__info{
+    
+  }
+  .player__info>h3{
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-width-medium);
+    line-height: var(--line-hight-medium);
+    padding-top: 1.6rem;
+  }
+  .player__info>p{
+    color: var(--gray-color);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-width-small-normal);
+    line-height: var(--line-hight-small);
+    padding: 1rem 0 3.3rem 0;
+  }
   @media screen and (max-width:600px) {
     html{
       font-size: 50%;
